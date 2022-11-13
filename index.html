@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSEC 302 Demo</title>
+    <script src="jquery-2.1.3.js"></script>
+
+  </head>
+  <body style="text-align:center;">
+
+    <h1 style="color: green">
+        GeeksForGeeks
+    </h1>
+
+    <h3>JQuery | extend() method</h3>
+    <p>Merge two objects, without modifying any object.</p>
+    <p id = "geeks"> </p>
+    <script>
+        var Object_1 = { bool_Val: false, num: 5, name: "shubham" };
+        var Object_2 = { bool_Val: true, name: "SHUBHAM" };
+
+        // Merge Object_1 and Object_2, without modifying Object_1
+        var Object_3 = $.extend( {}, Object_1, Object_2 );
+
+        // Assuming JSON.stringify - not available in IE<8
+        $( "#geeks" ).append(
+ "<b>Object_1 : </b>" + JSON.stringify( Object_1 ) + "<br>" );
+        $( "#geeks" ).append(
+ "<b>Object_2 : </b>" + JSON.stringify( Object_2 ) + "<br>" );
+        $( "#geeks" ).append(
+ "<b>Object_3 : </b>" + JSON.stringify( Object_3 ) + "<br>" );
+    </script>
+  </body>
+</html>
